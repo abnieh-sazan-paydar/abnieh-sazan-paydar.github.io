@@ -1,38 +1,38 @@
 [
   {
-    "id": "project-01",
-    "title": "ساختمان مسکونی هفت‌طبقه",
-    "service": "نظارت فنی",
-    "location": "تهران",
-    "summary": "نظارت فنی مرحله‌به‌مرحله بر عملیات ساختمانی، کنترل انطباق اجرا با نقشه‌ها و ضوابط فنی از مراحل سازه تا نازک‌کاری و نمای ساختمان.",
-    "cover": "08.jpg",
-    "count": 20
+    "id":"project-01",
+    "title":"نظارت فنی ساختمان مسکونی هفت‌طبقه",
+    "service":"نظارت فنی",
+    "summary":"نظارت فنی بر احداث ساختمان مسکونی هفت‌طبقه با سازه بتن‌آرمه، از مراحل فونداسیون و اجرای اسکلت تا دیوارچینی، تأسیسات، نازک‌کاری و تکمیل نمای ساختمان.",
+    "meta":["کاربری مسکونی","۱ زیرزمین + ۶ طبقه روی زمین","سازه بتن‌آرمه","شروع ۱۴۰۳/۰۷/۱۵","در مراحل پایانی تکمیل"],
+    "cover":"assets/projects/project-01/full/08.jpg",
+    "images":["assets/projects/project-01/full/01.jpg","assets/projects/project-01/full/03.jpg","assets/projects/project-01/full/05.jpg","assets/projects/project-01/full/07.jpg","assets/projects/project-01/full/08.jpg","assets/projects/project-01/full/10.jpg","assets/projects/project-01/full/12.jpg","assets/projects/project-01/full/14.jpg","assets/projects/project-01/full/16.jpg","assets/projects/project-01/full/18.jpg","assets/projects/project-01/full/19.jpg","assets/projects/project-01/full/20.jpg"]
   },
   {
-    "id": "project-02",
-    "title": "ساختمان مسکونی شهری",
-    "service": "نظارت فنی",
-    "location": "تهران",
-    "summary": "کنترل فنی عملیات گودبرداری، پایدارسازی، آرماتوربندی، اجرای سازه، سقف‌ها، تیغه‌چینی و اجزای غیرسازه‌ای در طول پیشرفت پروژه.",
-    "cover": "01.jpg",
-    "count": 9
+    "id":"project-02",
+    "title":"نظارت فنی ساختمان مسکونی چندطبقه",
+    "service":"نظارت فنی",
+    "summary":"نظارت فنی بر احداث ساختمان مسکونی چندطبقه، از مرحله تخریب و گودبرداری تا اجرای سازه بتن‌آرمه، سقف‌ها، دیوارچینی، وال‌پست‌ها و زیرسازی نما.",
+    "meta":["کاربری مسکونی","تخریب و گودبرداری","پایدارسازی گود","سازه بتن‌آرمه","زیرسازی نما"],
+    "cover":"assets/projects/project-02/full/01.jpg",
+    "images":["assets/projects/project-02/full/01.jpg","assets/projects/project-02/full/02.jpg","assets/projects/project-02/full/03.jpg","assets/projects/project-02/full/04.jpg","assets/projects/project-02/full/05.jpg","assets/projects/project-02/full/06.jpg","assets/projects/project-02/full/07.jpg","assets/projects/project-02/full/08.jpg","assets/projects/project-02/full/09.jpg"]
   },
   {
-    "id": "project-03",
-    "title": "پروژه مسکونی با سازه بتنی",
-    "service": "نظارت فنی",
-    "location": "تهران",
-    "summary": "نظارت فنی بر تخریب، گودبرداری و سازه نگهبان، اجرای فونداسیون، اسکلت بتنی، سقف‌ها، دیوارچینی و اتصالات اجزای نما.",
-    "cover": "19.jpg",
-    "count": 19
+    "id":"project-03",
+    "title":"نظارت فنی پروژه مسکونی با سازه بتن‌آرمه",
+    "service":"نظارت فنی",
+    "summary":"نظارت فنی بر تخریب، گودبرداری و پایدارسازی جداره‌ها، اجرای فونداسیون، اسکلت بتن‌آرمه، سقف‌ها، دیوارچینی و اجزای غیرسازه‌ای پروژه.",
+    "meta":["کاربری مسکونی","فونداسیون","اسکلت بتن‌آرمه","سقف‌ها و دیوارچینی","کنترل اجزای غیرسازه‌ای"],
+    "cover":"assets/projects/project-03/full/19.jpg",
+    "images":["assets/projects/project-03/full/01.jpg","assets/projects/project-03/full/02.jpg","assets/projects/project-03/full/04.jpg","assets/projects/project-03/full/06.jpg","assets/projects/project-03/full/08.jpg","assets/projects/project-03/full/10.jpg","assets/projects/project-03/full/12.jpg","assets/projects/project-03/full/14.jpg","assets/projects/project-03/full/16.jpg","assets/projects/project-03/full/17.jpg","assets/projects/project-03/full/18.jpg","assets/projects/project-03/full/19.jpg"]
   },
   {
-    "id": "project-04",
-    "title": "اجرای کامل ساختمان مسکونی",
-    "service": "اجرا",
-    "location": "تهران",
-    "summary": "مدیریت و اجرای عملیات از تخریب و پایدارسازی جداره‌ها تا گودبرداری، فونداسیون، سازه بتنی و مراحل اصلی ساخت در زمین با شرایط توپوگرافی و سنگی.",
-    "cover": "01.jpg",
-    "count": 32
+    "id":"project-04",
+    "title":"اجرای ساختمان مسکونی در زمین شیب‌دار و بستر سنگی",
+    "service":"اجرا",
+    "summary":"اجرای عملیات ساختمانی در زمینی شیب‌دار و سنگی، شامل تخریب مرحله‌ای، پایدارسازی جداره‌های مجاور، خاک‌برداری، اجرای فونداسیون، دیوارهای حائل و اجزای سازه بتن‌آرمه.",
+    "meta":["خدمات اجرا","زمین شیب‌دار","بستر سنگی","پایدارسازی جداره‌ها","دیوار حائل و سازه بتن‌آرمه"],
+    "cover":"assets/projects/project-04/full/01.jpg",
+    "images":["assets/projects/project-04/full/01.jpg","assets/projects/project-04/full/03.jpg","assets/projects/project-04/full/05.jpg","assets/projects/project-04/full/07.jpg","assets/projects/project-04/full/09.jpg","assets/projects/project-04/full/11.jpg","assets/projects/project-04/full/14.jpg","assets/projects/project-04/full/17.jpg","assets/projects/project-04/full/20.jpg","assets/projects/project-04/full/24.jpg","assets/projects/project-04/full/28.jpg","assets/projects/project-04/full/32.jpg"]
   }
 ]
