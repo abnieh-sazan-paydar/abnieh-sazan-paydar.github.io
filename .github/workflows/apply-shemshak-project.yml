@@ -1,6 +1,7 @@
 name: Apply Shemshak residential project
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
