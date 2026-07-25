@@ -1,4 +1,5 @@
 name: Apply social and registration refinements
+# Trigger after workflow registration
 
 on:
   push:
