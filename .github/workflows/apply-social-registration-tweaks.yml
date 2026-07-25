@@ -1,13 +1,12 @@
 name: Apply social and registration refinements
-# Trigger after workflow registration
-# Merge-trigger revision
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
-      - .github/workflows/apply-social-registration-tweaks.yml
+      - trigger-social-tweaks.txt
 
 permissions:
   contents: write
