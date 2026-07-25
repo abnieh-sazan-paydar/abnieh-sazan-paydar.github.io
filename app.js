@@ -9,6 +9,8 @@ function ensureSocialStrip(){
   document.body.prepend(strip);
 }
 ensureSocialStrip();
+const socialStrip=document.querySelector('.social-strip');
+if(socialStrip) socialStrip.style.flexDirection='row-reverse';
 
 const menuButton=document.querySelector('#menu-toggle');
 const nav=document.querySelector('#main-nav');
