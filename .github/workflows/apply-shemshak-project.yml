@@ -13,10 +13,11 @@ permissions:
 
 concurrency:
   group: apply-shemshak-project
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   apply:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -47,8 +48,9 @@ jobs:
 
           ZIP=tmp/shemshak_project_bundle/images.zip
           if ! unzip -t "$ZIP"; then
-            echo "Primary ZIP validation failed; attempting recovery."
-            zip -FF "$ZIP" --out tmp/shemshak_project_bundle/images-repaired.zip
+            echo "Primary ZIP validation failed; attempting non-interactive recovery."
+            rm -f tmp/shemshak_project_bundle/images-repaired.zip
+            timeout 60s bash -c 'yes y | zip -FF "$1" --out tmp/shemshak_project_bundle/images-repaired.zip' _ "$ZIP"
             ZIP=tmp/shemshak_project_bundle/images-repaired.zip
             unzip -t "$ZIP"
           fi
