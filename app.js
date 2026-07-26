@@ -10,8 +10,8 @@
   load('app-base.js?v=20260726-5', () => {
     load('service-flow.js?v=20260726-5', () => {
       load('footer-registration.js?v=20260726-1', () => {
-        load('about-slider.js?v=20260726-2', () => {
-          load('licence-image-fix.js?v=20260726-1');
+        load('about-slider.js?v=20260726-3', () => {
+          load('licence-image-fix.js?v=20260726-2');
         });
       });
     });
