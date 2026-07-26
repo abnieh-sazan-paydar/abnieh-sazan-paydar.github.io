@@ -7,7 +7,7 @@
 
   const sources = [
     {src:'assets/saeed-kiadarbandsari.png', alt:'دکتر سعید کیادربندسری'},
-    {src:'assets/about-engineer-02.webp', alt:'دکتر سعید کیادربندسری با پوشش مهندسی'}
+    {src:'assets/about-engineer-02.png', alt:'دکتر سعید کیادربندسری با پوشش مهندسی'}
   ];
 
   const slides = sources.map((item,index) => {
