@@ -8,6 +8,8 @@
   };
 
   load('app-base.js?v=20260726-5', () => {
-    load('service-flow.js?v=20260726-5');
+    load('service-flow.js?v=20260726-5', () => {
+      load('footer-registration.js?v=20260726-1');
+    });
   });
 })();
