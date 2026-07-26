@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://abnieh-sazan-paydar.github.io/sitemap.xml
