@@ -2,22 +2,30 @@
   const frame = document.querySelector('#about .profile-image');
   if (!frame || frame.dataset.sliderReady === 'true') return;
 
-  const firstImage = frame.querySelector('img');
-  if (!firstImage) return;
+  const originalImage = frame.querySelector('img');
+  if (!originalImage) return;
 
   frame.dataset.sliderReady = 'true';
   frame.classList.add('about-slider');
+  originalImage.style.display = 'none';
 
-  firstImage.classList.add('about-slide', 'active');
-  firstImage.setAttribute('data-slide', '0');
+  const sources = [
+    'assets/saeed-kiadarbandsari.png',
+    'assets/about-engineer-02.webp'
+  ];
 
-  const secondImage = document.createElement('img');
-  secondImage.className = 'about-slide';
-  secondImage.dataset.slide = '1';
-  secondImage.src = 'assets/about-engineer-02.webp';
-  secondImage.alt = 'دکتر سعید کیادربندسری با پوشش مهندسی';
-  secondImage.loading = 'lazy';
-  frame.appendChild(secondImage);
+  const stage = document.createElement('div');
+  stage.className = 'about-slider-stage';
+  const slides = sources.map((source, index) => {
+    const slide = document.createElement('div');
+    slide.className = `about-slide${index === 0 ? ' active' : ''}`;
+    slide.style.backgroundImage = `url("${source}")`;
+    slide.setAttribute('role', 'img');
+    slide.setAttribute('aria-label', index === 0 ? 'دکتر سعید کیادربندسری' : 'دکتر سعید کیادربندسری با پوشش مهندسی');
+    stage.appendChild(slide);
+    return slide;
+  });
+  frame.appendChild(stage);
 
   const controls = document.createElement('div');
   controls.className = 'about-slider-controls';
@@ -33,8 +41,9 @@
 
   const style = document.createElement('style');
   style.textContent = `
-    #about .profile-image.about-slider{position:relative}
-    #about .profile-image.about-slider .about-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 12%;opacity:0;visibility:hidden;transition:opacity .4s ease;filter:saturate(.75)}
+    #about .profile-image.about-slider{position:relative;isolation:isolate}
+    #about .profile-image.about-slider .about-slider-stage{position:absolute;inset:0;z-index:1;background:#252525}
+    #about .profile-image.about-slider .about-slide{position:absolute;inset:0;background-size:cover;background-position:center 12%;background-repeat:no-repeat;opacity:0;visibility:hidden;transition:opacity .4s ease;filter:saturate(.75)}
     #about .profile-image.about-slider .about-slide.active{opacity:1;visibility:visible}
     #about .profile-image.about-slider .about-slider-controls{position:absolute;right:18px;left:18px;bottom:18px;z-index:3;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
     #about .profile-image.about-slider .about-slider-arrow{pointer-events:auto;width:42px;height:42px;border:1px solid rgba(255,255,255,.58);background:rgba(17,17,17,.58);color:#fff;font-size:27px;line-height:1;cursor:pointer;backdrop-filter:blur(7px)}
@@ -45,7 +54,6 @@
   `;
   document.head.appendChild(style);
 
-  const slides = [...frame.querySelectorAll('.about-slide')];
   const dots = [...controls.querySelectorAll('.about-slider-dots button')];
   let current = 0;
 
@@ -60,9 +68,9 @@
   dots.forEach(dot => dot.addEventListener('click', () => show(Number(dot.dataset.index))));
 
   let touchStart = 0;
-  frame.addEventListener('touchstart', event => { touchStart = event.changedTouches[0].clientX; }, {passive:true});
+  frame.addEventListener('touchstart', event => { touchStart = event.changedTouches[0].clientX; }, { passive: true });
   frame.addEventListener('touchend', event => {
     const distance = event.changedTouches[0].clientX - touchStart;
     if (Math.abs(distance) > 45) show(current + (distance < 0 ? 1 : -1));
-  }, {passive:true});
+  }, { passive: true });
 })();
