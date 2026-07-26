@@ -5,7 +5,7 @@
     frame.innerHTML = `
       <div class="about-final-slides">
         <img class="about-final-slide active" src="assets/saeed-kiadarbandsari.png" alt="دکتر سعید کیادربندسری">
-        <img class="about-final-slide" src="assets/about-engineer-02.webp" alt="دکتر سعید کیادربندسری با پوشش مهندسی" loading="lazy">
+       <img class="about-final-slide" src="assets/about-engineer-02.png" alt="دکتر سعید کیادربندسری با پوشش مهندسی" loading="lazy">
       </div>
       <div class="about-final-controls">
         <button type="button" class="about-final-arrow about-final-prev" aria-label="تصویر قبلی">‹</button>
