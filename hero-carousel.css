@@ -5,6 +5,16 @@
   isolation:isolate;
 }
 
+.hero-copy{
+  max-width:calc(100vw - max(22px, calc((100vw - var(--max))/2)) - 22px);
+}
+
+.hero h1{
+  font-size:clamp(21px,4.7vw,74px);
+  letter-spacing:-2px;
+  white-space:nowrap;
+}
+
 .hero-prism{
   --hero-depth:28.8675vw;
   --hero-rotation:0deg;
