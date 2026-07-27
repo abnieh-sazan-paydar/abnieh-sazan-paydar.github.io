@@ -1,0 +1,76 @@
+.hero-media-3d{
+  perspective:1600px;
+  perspective-origin:50% 50%;
+  background:#0c1118;
+  isolation:isolate;
+}
+
+.hero-prism{
+  --hero-depth:28.8675vw;
+  --hero-rotation:0deg;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+  transform:translateZ(calc(var(--hero-depth) * -1)) rotateY(var(--hero-rotation));
+  transition:transform 1.2s cubic-bezier(.68,.02,.24,1);
+  will-change:transform;
+}
+
+.hero-prism-face{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  background:#0c1118;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+
+.hero-prism-face:nth-child(1){
+  transform:rotateY(0deg) translateZ(var(--hero-depth));
+}
+
+.hero-prism-face:nth-child(2){
+  transform:rotateY(120deg) translateZ(var(--hero-depth));
+}
+
+.hero-prism-face:nth-child(3){
+  transform:rotateY(240deg) translateZ(var(--hero-depth));
+}
+
+.hero-media-3d .hero-prism-face img{
+  object-fit:cover;
+  object-position:center;
+  filter:none;
+  transform:translateZ(1px) scale(1.002);
+}
+
+.hero-media-3d::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  box-shadow:inset 0 0 90px rgba(0,0,0,.18);
+}
+
+@media(max-width:700px){
+  .hero-media-3d{perspective:1050px}
+  .hero-prism{transition-duration:1s}
+  .hero-media-3d .hero-prism-face img{object-position:58% center}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-prism{
+    transform:none;
+    transition:none;
+  }
+
+  .hero-prism-face{
+    display:none;
+    transform:none;
+  }
+
+  .hero-prism-face:first-child{display:block}
+}

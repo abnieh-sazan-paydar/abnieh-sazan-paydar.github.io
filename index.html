@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260727-3">
+  <link rel="stylesheet" href="hero-carousel.css?v=20260727-1">
 
   <style>
     .documents-section{padding-top:90px;padding-bottom:90px;background:#fff;border-top:1px solid var(--line)}
@@ -96,8 +97,18 @@
 
   <main>
     <section class="hero">
-      <div class="hero-media">
-        <img src="assets/projects/villa-supervision/04-steel-frame.webp" alt="پروژه ویلای مدرن تحت نظارت شرکت" fetchpriority="high">
+      <div class="hero-media hero-media-3d" data-hero-carousel aria-hidden="true">
+        <div class="hero-prism">
+          <div class="hero-prism-face">
+            <img src="assets/hero/hero-engineering-process.webp" alt="" fetchpriority="high" decoding="async">
+          </div>
+          <div class="hero-prism-face">
+            <img src="assets/hero/hero-mountain-villa.webp" alt="" decoding="async">
+          </div>
+          <div class="hero-prism-face">
+            <img src="assets/hero/hero-design-to-execution.webp" alt="" decoding="async">
+          </div>
+        </div>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-copy reveal">
@@ -307,6 +318,7 @@
     </div>
   </div>
   <a class="whatsapp-float" href="https://wa.me/989125361958" target="_blank" rel="noopener" aria-label="گفت‌وگو در واتساپ">WA</a>
+  <script src="hero-carousel.js?v=20260727-1" defer></script>
   <script src="app.js"></script>
 
   <script>
