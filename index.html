@@ -47,21 +47,19 @@
     @media(max-width:650px){.management-switcher{height:78px;gap:16px}.management-switcher-copy{min-width:150px}.management-arrow{width:42px;height:42px}}
 
     /* service-3d-enhancement */
-    #services .service-grid{perspective:1800px;perspective-origin:50% 32%;transform-style:preserve-3d;overflow:visible;padding:72px 34px 66px}
-    #services .service-grid .service-card{--tilt-x:3.5deg;--tilt-y:-2.5deg;--service-depth:22px;position:relative;z-index:1;isolation:isolate;overflow:visible;transform-style:preserve-3d;transform-origin:center bottom;transform:rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translate3d(-7px,-11px,0);background:linear-gradient(145deg,#fff 0%,#f7f3ed 78%,#eee8df 100%);border:1px solid #d4ccc1;border-radius:14px;box-shadow:0 2px 0 rgba(255,255,255,.95),0 12px 24px rgba(28,24,19,.16);transition:transform .22s ease-out,box-shadow .35s ease,border-color .3s;will-change:transform}
-    #services .service-grid .service-card:nth-child(even){--tilt-y:2.5deg}
-    #services .service-grid .service-card:before{border-radius:13px 13px 0 0;box-shadow:inset 0 -28px 32px rgba(17,15,13,.18);position:relative;z-index:2}
-    #services .service-grid .service-card-depth{display:block;position:absolute;inset:0;z-index:-1;pointer-events:none;border:1px solid #8f8377;border-radius:14px;background:linear-gradient(145deg,#c3b8ab 0%,#aa9d90 46%,#887b70 100%);box-shadow:0 20px 34px rgba(28,24,19,.25),inset 1px 1px 0 rgba(255,255,255,.32);transform:translate3d(var(--service-depth),var(--service-depth),-36px);transition:transform .35s cubic-bezier(.2,.75,.25,1),box-shadow .35s ease}
-    #services .service-grid .service-card-depth:before,#services .service-grid .service-card-depth:after{content:none}
-    #services .service-grid .service-card>span{transform:translateX(50%) translateZ(42px);border-width:2px;box-shadow:0 6px 0 #c9bfb2,0 13px 25px rgba(0,0,0,.2)}
-    #services .service-grid .service-card h3{transform:translateZ(30px)}
-    #services .service-grid .service-card p{transform:translateZ(22px)}
-    #services .service-grid .service-card small{transform:translateZ(26px)}
-    #services .service-grid .service-card:hover{z-index:8;transform:rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translate3d(-10px,-20px,42px) scale(1.015);border-color:rgba(179,18,45,.56);box-shadow:0 2px 0 rgba(255,255,255,.95),0 24px 42px rgba(28,24,19,.24)}
-    #services .service-grid .service-card:hover .service-card-depth{transform:translate3d(27px,27px,-44px);box-shadow:0 25px 42px rgba(28,24,19,.29),inset 1px 1px 0 rgba(255,255,255,.32)}
-    @media(max-width:1050px){#services .service-grid{perspective:1500px;padding:72px 34px 68px}#services .service-grid .service-card{--service-depth:20px;--tilt-x:3deg;transform:rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translate3d(-6px,-10px,0)}#services .service-grid .service-card:hover .service-card-depth{transform:translate3d(24px,24px,-40px)}}
-    @media(max-width:650px){#services .service-grid{perspective:1200px;padding:70px 28px 64px}#services .service-grid .service-card{--service-depth:17px;--tilt-x:2.2deg;--tilt-y:-1.3deg;transform:rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translate3d(-4px,-8px,0)}#services .service-grid .service-card:nth-child(even){--tilt-y:1.3deg}#services .service-grid .service-card:hover{transform:rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translate3d(-6px,-14px,24px)}#services .service-grid .service-card:hover .service-card-depth{transform:translate3d(20px,20px,-34px)}}
-    @media(prefers-reduced-motion:reduce){#services .service-grid .service-card,#services .service-grid .service-card-depth{transition:none}}
+    #services .service-grid{perspective:none;transform-style:flat;overflow:visible;align-items:stretch;padding:58px 24px 54px}
+    #services .service-grid .service-card{position:relative;z-index:1;isolation:auto;overflow:visible;transform:none;transform-style:flat;background:#fff;border:1px solid #d8d2ca;border-radius:16px;box-shadow:0 4px 0 #eee9e2,0 9px 0 #d8d0c6,0 15px 0 #b2a79a,0 28px 38px rgba(28,24,19,.2);transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+    #services .service-grid .service-card:nth-child(even){transform:none}
+    #services .service-grid .service-card:before{border-radius:15px 15px 0 0;box-shadow:none;position:relative;z-index:auto;filter:saturate(.96) contrast(1.04)}
+    #services .service-grid .service-card:after{content:none}
+    #services .service-grid .service-card>span{transform:translateX(50%);border-width:1px;background:#fff;color:var(--red);box-shadow:0 4px 0 #d8d0c6,0 10px 22px rgba(28,24,19,.16)}
+    #services .service-grid .service-card h3{transform:none;color:#171717;opacity:1;font-weight:800}
+    #services .service-grid .service-card p{transform:none;color:#5d5750;opacity:1;font-weight:500}
+    #services .service-grid .service-card small{transform:none;color:var(--red);opacity:1;font-weight:700}
+    #services .service-grid .service-card:hover{z-index:3;transform:translateY(-10px);background:#fff;border-color:rgba(179,18,45,.46);box-shadow:0 5px 0 #f1ece5,0 11px 0 #d7cec3,0 18px 0 #aa9e90,0 35px 48px rgba(28,24,19,.25)}
+    @media(max-width:1050px){#services .service-grid{padding:58px 26px 56px}#services .service-grid .service-card,#services .service-grid .service-card:nth-child(even){transform:none}}
+    @media(max-width:650px){#services .service-grid{padding:56px 20px 50px}#services .service-grid .service-card{box-shadow:0 3px 0 #eee9e2,0 8px 0 #d8d0c6,0 13px 0 #b2a79a,0 24px 32px rgba(28,24,19,.19)}#services .service-grid .service-card:hover{transform:translateY(-7px);box-shadow:0 4px 0 #f1ece5,0 9px 0 #d7cec3,0 15px 0 #aa9e90,0 29px 38px rgba(28,24,19,.23)}}
+    @media(prefers-reduced-motion:reduce){#services .service-grid .service-card{transition:none}}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"ابنیه سازان پایدار شمیران","url":"https://abnieh-sazan-paydar.github.io/","telephone":["+982126313946","+989125361958"],"email":"Abniyeh_sazan_Shemiran@gmail.com","address":{"@type":"PostalAddress","addressLocality":"تهران","streetAddress":"پاسداران، بوستان دهم","addressCountry":"IR"},"founder":{"@type":"Person","name":"سعید کیادربندسری","jobTitle":"رئیس هیئت‌مدیره"}}
@@ -132,11 +130,11 @@
         <p>از مطالعات اولیه تا تحویل نهایی؛ با هماهنگی کامل میان معماری، سازه و تأسیسات.</p>
       </div>
       <div class="service-grid">
-        <article class="service-card reveal"><span>01</span><h3>طراحی یکپارچه</h3><p>معماری، سازه، برق، مکانیک و تهیه نقشه‌های فاز یک، فاز دو و اجرایی.</p><small>DESIGN & ENGINEERING</small><i class="service-card-depth" aria-hidden="true"></i></article>
-        <article class="service-card reveal"><span>02</span><h3>نظارت و کنترل فنی</h3><p>کنترل انطباق عملیات با نقشه‌های مصوب، مقررات ملی و الزامات کیفی.</p><small>TECHNICAL SUPERVISION</small><i class="service-card-depth" aria-hidden="true"></i></article>
-        <article class="service-card reveal"><span>03</span><h3>اجرا و مدیریت ساخت</h3><p>اجرای صفر تا صد، مدیریت عوامل، تأمین، برنامه‌ریزی و کنترل زمان و هزینه.</p><small>CONSTRUCTION MANAGEMENT</small><i class="service-card-depth" aria-hidden="true"></i></article>
-        <article class="service-card reveal"><span>04</span><h3>مشاوره و کارشناسی</h3><p>امکان‌سنجی، ارزیابی فنی، برآورد خسارت و ارائه راهکار برای تصمیم‌گیری مطمئن.</p><small>CONSULTING & EXPERTISE</small><i class="service-card-depth" aria-hidden="true"></i></article>
-        <article class="service-card reveal"><span>05</span><h3>خدمات حقوقی</h3><p>خدمات حقوقی در زمینه عقد قرارداد مشارکت در ساخت و مدیریت پیمان</p><small>CONSTRUCTION LEGAL SERVICES</small><i class="service-card-depth" aria-hidden="true"></i></article>
+        <article class="service-card reveal"><span>01</span><h3>طراحی یکپارچه</h3><p>معماری، سازه، برق، مکانیک و تهیه نقشه‌های فاز یک، فاز دو و اجرایی.</p><small>DESIGN & ENGINEERING</small></article>
+        <article class="service-card reveal"><span>02</span><h3>نظارت و کنترل فنی</h3><p>کنترل انطباق عملیات با نقشه‌های مصوب، مقررات ملی و الزامات کیفی.</p><small>TECHNICAL SUPERVISION</small></article>
+        <article class="service-card reveal"><span>03</span><h3>اجرا و مدیریت ساخت</h3><p>اجرای صفر تا صد، مدیریت عوامل، تأمین، برنامه‌ریزی و کنترل زمان و هزینه.</p><small>CONSTRUCTION MANAGEMENT</small></article>
+        <article class="service-card reveal"><span>04</span><h3>مشاوره و کارشناسی</h3><p>امکان‌سنجی، ارزیابی فنی، برآورد خسارت و ارائه راهکار برای تصمیم‌گیری مطمئن.</p><small>CONSULTING & EXPERTISE</small></article>
+        <article class="service-card reveal"><span>05</span><h3>خدمات حقوقی</h3><p>خدمات حقوقی در زمینه عقد قرارداد مشارکت در ساخت و مدیریت پیمان</p><small>CONSTRUCTION LEGAL SERVICES</small></article>
       </div>
     </section>
 
@@ -345,32 +343,6 @@
     })();
   </script>
 
-  <script id="service-card-tilt-script">
-    (() => {
-      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      document.querySelectorAll('#services .service-card').forEach((card) => {
-        let frame = 0;
-        let lastEvent;
-        const updateTilt = () => {
-          frame = 0;
-          const bounds = card.getBoundingClientRect();
-          const x = (lastEvent.clientX - bounds.left) / bounds.width - 0.5;
-          const y = (lastEvent.clientY - bounds.top) / bounds.height - 0.5;
-          card.style.setProperty('--tilt-x', `${(-y * 9).toFixed(2)}deg`);
-          card.style.setProperty('--tilt-y', `${(x * 11).toFixed(2)}deg`);
-        };
-        card.addEventListener('pointermove', (event) => {
-          lastEvent = event;
-          if (!frame) frame = requestAnimationFrame(updateTilt);
-        });
-        card.addEventListener('pointerleave', () => {
-          if (frame) cancelAnimationFrame(frame);
-          frame = 0;
-          card.style.removeProperty('--tilt-x');
-          card.style.removeProperty('--tilt-y');
-        });
-      });
-    })();
-  </script>
+
 </body>
 </html>
