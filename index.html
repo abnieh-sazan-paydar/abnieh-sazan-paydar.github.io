@@ -45,6 +45,18 @@
     .management-panel.is-active{display:block;animation:management-panel-in .42s ease both}
     @keyframes management-panel-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
     @media(max-width:650px){.management-switcher{height:78px;gap:16px}.management-switcher-copy{min-width:150px}.management-arrow{width:42px;height:42px}}
+
+    /* service-3d-enhancement */
+    #services .service-grid{perspective:1500px;perspective-origin:50% 38%;padding-right:14px;padding-left:14px;padding-bottom:38px}
+    #services .service-grid .service-card{transform-style:preserve-3d;transform:perspective(1000px) rotateX(2.4deg) rotateY(-1.2deg) translate3d(-5px,-7px,0);background:linear-gradient(145deg,#fff 0%,#f8f5f0 100%);border:1px solid #d8d1c7;border-radius:13px;box-shadow:1px 1px 0 #f2eee8,3px 3px 0 #e5dfd7,6px 6px 0 #d4ccc2,9px 9px 0 #c1b8ac,13px 13px 0 #a99f92,24px 31px 42px rgba(28,24,19,.24);transition:transform .4s cubic-bezier(.2,.75,.25,1),box-shadow .4s cubic-bezier(.2,.75,.25,1),border-color .3s}
+    #services .service-grid .service-card:after{content:"";position:absolute;top:10px;right:-13px;bottom:-13px;width:13px;border-radius:0 6px 7px 0;background:linear-gradient(180deg,#d8d0c5 0%,#aaa093 72%,#8f8579 100%);transform:skewY(39deg);transform-origin:left top;z-index:-1;pointer-events:none;opacity:.9}
+    #services .service-grid .service-card:before{border-radius:12px 12px 0 0}
+    #services .service-grid .service-card>span{transform:translateX(50%) translateZ(30px);box-shadow:0 9px 0 rgba(169,159,146,.45),0 17px 28px rgba(0,0,0,.18)}
+    #services .service-grid .service-card h3,#services .service-grid .service-card p,#services .service-grid .service-card small{transform:translateZ(18px)}
+    #services .service-grid .service-card:hover{transform:perspective(1000px) rotateX(0deg) rotateY(0deg) translate3d(-9px,-17px,32px);border-color:rgba(179,18,45,.5);box-shadow:1px 1px 0 #f5f1eb,4px 4px 0 #e9e2da,8px 8px 0 #d7cec3,12px 12px 0 #c1b6aa,17px 17px 0 #9f9385,31px 43px 58px rgba(28,24,19,.3)}
+    @media(max-width:1050px){#services .service-grid{padding-right:18px;padding-left:18px}#services .service-grid .service-card{transform:perspective(900px) rotateX(2deg) rotateY(-.8deg) translate3d(-4px,-6px,0)}#services .service-grid .service-card:hover{transform:perspective(900px) translate3d(-7px,-14px,24px)}}
+    @media(max-width:650px){#services .service-grid{padding-right:12px;padding-left:12px;padding-bottom:34px}#services .service-grid .service-card{transform:perspective(800px) rotateX(1.7deg) translate3d(-3px,-5px,0);box-shadow:1px 1px 0 #f2eee8,3px 3px 0 #e5dfd7,6px 6px 0 #d4ccc2,9px 9px 0 #bcb2a6,18px 25px 34px rgba(28,24,19,.22)}}
+    @media(prefers-reduced-motion:reduce){#services .service-grid .service-card{transition:none}}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"ابنیه سازان پایدار شمیران","url":"https://abnieh-sazan-paydar.github.io/","telephone":["+982126313946","+989125361958"],"email":"Abniyeh_sazan_Shemiran@gmail.com","address":{"@type":"PostalAddress","addressLocality":"تهران","streetAddress":"پاسداران، بوستان دهم","addressCountry":"IR"},"founder":{"@type":"Person","name":"سعید کیادربندسری","jobTitle":"رئیس هیئت‌مدیره"}}
