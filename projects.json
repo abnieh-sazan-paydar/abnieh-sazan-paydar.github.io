@@ -138,5 +138,32 @@
       "assets/project-images/project-06/11-autumn-view.webp",
       "assets/project-images/project-06/12-winter-view.webp"
     ]
+  },
+  {
+    "id": "project-07",
+    "title": "طراحی سازه و نظارت ساختمان مسکونی شش‌طبقه در تهران",
+    "service": "طراحی سازه",
+    "summary": "طراحی سازه و نظارت فنی بر اجرای ساختمان مسکونی شش‌طبقه در تهران؛ از آماده‌سازی بستر و اجرای فونداسیون تا سازه بتن‌آرمه، سقف‌های تیرچه‌بلوک، دیوارچینی و کنترل جزئیات اجرایی.",
+    "meta": [
+      "کاربری: مسکونی",
+      "۶ طبقه",
+      "موقعیت: تهران",
+      "سال طراحی و نظارت: ۱۳۹۸",
+      "خدمات: طراحی سازه و نظارت فنی"
+    ],
+    "cover": "assets/project-images/project-07/01-facade-render.webp",
+    "images": [
+      "assets/project-images/project-07/01-facade-render.webp",
+      "assets/project-images/project-07/02-site-preparation.webp",
+      "assets/project-images/project-07/03-foundation-rebar.webp",
+      "assets/project-images/project-07/04-column-formwork.webp",
+      "assets/project-images/project-07/05-slab-reinforcement.webp",
+      "assets/project-images/project-07/06-beam-reinforcement.webp",
+      "assets/project-images/project-07/07-frame-columns.webp",
+      "assets/project-images/project-07/08-upper-floor-formwork.webp",
+      "assets/project-images/project-07/09-concrete-frame.webp",
+      "assets/project-images/project-07/10-masonry-progress.webp",
+      "assets/project-images/project-07/11-current-structure.webp"
+    ]
   }
 ]
