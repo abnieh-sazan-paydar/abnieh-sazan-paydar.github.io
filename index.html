@@ -31,6 +31,20 @@
     .document-copy p{margin:0;color:var(--muted);font-size:12px}
     .document-hint{display:inline-block;margin-top:10px;color:var(--red);font-size:10px;font-weight:700}
     @media(max-width:700px){.documents-section{padding-top:65px;padding-bottom:65px}.document-card{padding:10px}.document-copy h3{font-size:18px}}
+
+    .management-carousel{position:relative;background:#171717;overflow:hidden}
+    .management-switcher{height:86px;display:flex;direction:ltr;align-items:center;justify-content:center;gap:24px;padding:0 24px;background:#141414;border-bottom:1px solid #333;position:relative;z-index:6}
+    .management-switcher-copy{min-width:180px;text-align:center;direction:rtl;display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:10px}
+    .management-switcher-copy small{grid-column:1/-1;color:#888;font-size:9px;font-weight:700;letter-spacing:.8px;margin-bottom:2px}
+    .management-switcher-copy strong{color:#fff;font-size:17px;font-weight:800}
+    .management-switcher-copy span{color:#ef536d;font:700 10px var(--latin)}
+    .management-arrow{width:46px;height:46px;border:1px solid rgba(239,83,109,.6);border-radius:50%;background:#202020;color:#fff;font:300 31px/1 var(--latin);display:grid;place-items:center;cursor:pointer;transition:.25s}
+    .management-arrow:not(:disabled):hover{background:var(--red);border-color:var(--red);transform:translateY(-2px)}
+    .management-arrow:disabled{opacity:.25;cursor:not-allowed}
+    .management-panel{display:none}
+    .management-panel.is-active{display:block;animation:management-panel-in .42s ease both}
+    @keyframes management-panel-in{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+    @media(max-width:650px){.management-switcher{height:78px;gap:16px}.management-switcher-copy{min-width:150px}.management-arrow{width:42px;height:42px}}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"ابنیه سازان پایدار شمیران","url":"https://abnieh-sazan-paydar.github.io/","telephone":["+982126313946","+989125361958"],"email":"Abniyeh_sazan_Shemiran@gmail.com","address":{"@type":"PostalAddress","addressLocality":"تهران","streetAddress":"پاسداران، بوستان دهم","addressCountry":"IR"},"founder":{"@type":"Person","name":"سعید کیادربندسری","jobTitle":"رئیس هیئت‌مدیره"}}
@@ -109,7 +123,18 @@
       </div>
     </section>
 
-    <section class="profile-section section-pad" id="about">
+    <div class="management-carousel" id="about" aria-label="معرفی مدیریت شرکت">
+      <div class="management-switcher" role="group" aria-label="انتخاب صفحه مدیریت">
+        <button type="button" class="management-arrow" id="management-prev" aria-label="نمایش مدیریت فنی" disabled>‹</button>
+        <div class="management-switcher-copy">
+          <small>صفحه مدیریت</small>
+          <strong id="management-current-title">مدیریت فنی</strong>
+          <span id="management-counter">۱ از ۲</span>
+        </div>
+        <button type="button" class="management-arrow" id="management-next" aria-label="نمایش مدیریت حقوقی">›</button>
+      </div>
+      <div class="management-panel is-active" data-management-title="مدیریت فنی" aria-hidden="false">
+        <section class="profile-section section-pad" id="technical-management">
       <div class="profile-image reveal"><img src="assets/saeed-kiadarbandsari.png" alt="دکتر سعید کیادربندسری"></div>
       <div class="profile-copy reveal">
         <span class="kicker" style="font-size:24px">مدیریت فنی</span>
@@ -135,8 +160,9 @@
         </table>
       </div>
     </section>
-
-    <section class="profile-section section-pad" id="legal-management">
+      </div>
+      <div class="management-panel" data-management-title="مدیریت حقوقی" aria-hidden="true">
+        <section class="profile-section section-pad" id="legal-management">
       <div class="profile-image reveal"><img src="assets/shaghayegh-kiadarbandsari.svg" alt="شقایق کیادربندسری"></div>
       <div class="profile-copy reveal">
         <span class="kicker" style="font-size:24px">مدیریت حقوقی</span>
@@ -160,6 +186,8 @@
         </table>
       </div>
     </section>
+      </div>
+    </div>
 
     <section class="section projects-section section-pad" id="projects">
       <div class="section-heading reveal">
@@ -265,5 +293,39 @@
   </div>
   <a class="whatsapp-float" href="https://wa.me/989125361958" target="_blank" rel="noopener" aria-label="گفت‌وگو در واتساپ">WA</a>
   <script src="app.js"></script>
+
+  <script>
+    (() => {
+      const panels = Array.from(document.querySelectorAll('.management-panel'));
+      const previous = document.getElementById('management-prev');
+      const next = document.getElementById('management-next');
+      const title = document.getElementById('management-current-title');
+      const counter = document.getElementById('management-counter');
+      if (panels.length !== 2 || !previous || !next || !title || !counter) return;
+
+      let current = 0;
+      const persianNumbers = ['۱', '۲'];
+
+      const showPanel = (index) => {
+        current = Math.max(0, Math.min(index, panels.length - 1));
+        panels.forEach((panel, panelIndex) => {
+          const active = panelIndex === current;
+          panel.classList.toggle('is-active', active);
+          panel.setAttribute('aria-hidden', String(!active));
+          if (active) {
+            panel.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
+          }
+        });
+        title.textContent = panels[current].dataset.managementTitle;
+        counter.textContent = `${persianNumbers[current]} از ۲`;
+        previous.disabled = current === 0;
+        next.disabled = current === panels.length - 1;
+      };
+
+      previous.addEventListener('click', () => showPanel(current - 1));
+      next.addEventListener('click', () => showPanel(current + 1));
+      showPanel(0);
+    })();
+  </script>
 </body>
 </html>
