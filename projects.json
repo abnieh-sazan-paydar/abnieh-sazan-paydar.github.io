@@ -110,5 +110,33 @@
       "assets/project-images/assets/project-images/project-05/08-complete-steel-frame.webp",
       "assets/project-images/assets/project-images/project-05/09-current-progress.webp"
     ]
+  },
+  {
+    "id": "project-06",
+    "title": "طراحی ویلای مسکونی سه‌طبقه در شمشک",
+    "service": "طراحی سازه",
+    "summary": "طراحی ویلای مسکونی سه‌طبقه در شمشک با مساحت ۱۰۰۰ مترمربع؛ با تمرکز بر شکل‌دهی سازه فولادی، هماهنگی هندسه پلکان منحنی و انطباق راهکارهای سازه‌ای با معماری کلاسیک پروژه. این گالری مسیر شکل‌گیری طرح تا تحقق آن در کارگاه را نمایش می‌دهد.",
+    "meta": [
+      "موقعیت: شمشک",
+      "سال طراحی: ۱۳۹۸",
+      "مساحت: ۱۰۰۰ مترمربع",
+      "۳ طبقه",
+      "کاربری: ویلای مسکونی"
+    ],
+    "cover": "assets/project-images/project-06/01-cover.webp",
+    "images": [
+      "assets/project-images/project-06/01-cover.webp",
+      "assets/project-images/project-06/02-design-front.webp",
+      "assets/project-images/project-06/03-design-rear.webp",
+      "assets/project-images/project-06/04-structural-model.webp",
+      "assets/project-images/project-06/05-structural-model-angle.webp",
+      "assets/project-images/project-06/06-steel-frame.webp",
+      "assets/project-images/project-06/07-curved-stair.webp",
+      "assets/project-images/project-06/08-facade-execution.webp",
+      "assets/project-images/project-06/09-facade-corner.webp",
+      "assets/project-images/project-06/10-facade-detail.webp",
+      "assets/project-images/project-06/11-autumn-view.webp",
+      "assets/project-images/project-06/12-winter-view.webp"
+    ]
   }
 ]
