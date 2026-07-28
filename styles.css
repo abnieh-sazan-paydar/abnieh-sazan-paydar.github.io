@@ -2,3 +2,105 @@
 @import url("services-flow.css?v=20260727-4");
 @import url("header-final.css?v=20260727-2");
 @import url("asset-overrides.css?v=20260727-1");
+
+/* academyofcivil-typography-reference
+   Font family: closest freely available alternative to IRANSans.
+   Font-size scale follows the supplied reference page. */
+body,
+body a,
+body button,
+body input,
+body select,
+body textarea,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body li,
+body td,
+body th,
+body label,
+body small,
+body strong,
+body b,
+body bdi,
+body span{
+  font-family:"Vazirmatn",Tahoma,sans-serif!important;
+}
+
+body{font-size:14px}
+.site-header nav a{font-size:16px!important}
+.brand strong{font-size:16px!important}
+.brand small{font-size:12px!important}
+.header-cta,
+.button,
+.project-form button{font-size:14px!important}
+
+h1,
+.hero h1{font-size:24px!important}
+h2,
+.intro-band h2,
+.section-heading h2,
+.profile-copy h2,
+.credential-title h2,
+.request-copy h2,
+.documents-head h2{font-size:24px!important}
+h3,
+.service-card h3,
+.profile-copy h3,
+.article-card h3,
+.project-body h3,
+.document-copy h3{font-size:20px!important}
+h4,h5,h6{font-size:16px!important}
+
+p,
+li,
+td,
+th,
+label,
+input,
+select,
+textarea{font-size:14px!important}
+.eyebrow,
+.kicker{font-size:14px!important}
+small,
+.service-card small,
+.article-card small,
+.contact-quick small,
+.footer-col small,
+.document-hint{font-size:12px!important}
+.header-calendar-date{font-size:12px!important}
+.header-calendar-time{font-size:14px!important}
+.management-switcher-copy strong{font-size:20px!important}
+.management-switcher-copy small,
+.management-switcher-copy span{font-size:12px!important}
+.project-filter button,
+.text-link,
+.project-body>span{font-size:14px!important}
+.footer-brand h2{font-size:20px!important}
+.footer-col a,
+.footer-col p,
+.footer-brand p{font-size:14px!important}
+.footer-bottom{font-size:12px!important}
+
+@media(max-width:820px){
+  h1,
+  .hero h1{font-size:22px!important}
+  h2,
+  .intro-band h2,
+  .section-heading h2,
+  .profile-copy h2,
+  .credential-title h2,
+  .request-copy h2,
+  .documents-head h2{font-size:20px!important}
+  h3,
+  .service-card h3,
+  .profile-copy h3,
+  .article-card h3,
+  .project-body h3,
+  .document-copy h3{font-size:18px!important}
+  .site-header nav a{font-size:16px!important}
+}
