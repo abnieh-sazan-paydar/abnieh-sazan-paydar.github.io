@@ -61,6 +61,18 @@
     @media(max-width:1050px){#services .service-grid{padding:58px 26px 56px}#services .service-grid .service-card,#services .service-grid .service-card:nth-child(even){transform:none}}
     @media(max-width:650px){#services .service-grid{padding:56px 20px 50px}#services .service-grid .service-card{box-shadow:0 3px 0 #eee9e2,0 8px 0 #d8d0c6,0 13px 0 #b2a79a,0 24px 32px rgba(28,24,19,.19)}#services .service-grid .service-card:hover{transform:translateY(-7px);box-shadow:0 4px 0 #f1ece5,0 9px 0 #d7cec3,0 15px 0 #aa9e90,0 29px 38px rgba(28,24,19,.23)}}
     @media(prefers-reduced-motion:reduce){#services .service-grid .service-card{transition:none}}
+
+
+    /* Header Persian date and live Tehran clock */
+    .header-calendar{position:relative;display:flex;align-items:center;gap:10px;min-width:174px;height:50px;padding:7px 11px;border:1px solid #ddd7cf;border-radius:12px;background:linear-gradient(145deg,#fff 0%,#f7f3ee 100%);box-shadow:0 8px 22px rgba(28,24,19,.08);overflow:hidden;direction:rtl}
+    .header-calendar:after{content:"";position:absolute;right:0;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--red)}
+    .header-calendar-icon{width:32px;height:32px;flex:0 0 32px;border-radius:9px;display:grid;place-items:center;background:var(--red);color:#fff;box-shadow:0 6px 14px rgba(179,18,45,.22)}
+    .header-calendar-icon svg{width:17px;height:17px;display:block}
+    .header-calendar-copy{min-width:0;display:flex;flex-direction:column;justify-content:center;line-height:1.35}
+    .header-calendar-date{font-size:9px;font-weight:700;color:#625d56;white-space:nowrap}
+    .header-calendar-time{font:800 15px/1.35 var(--latin);color:var(--ink);letter-spacing:.5px;direction:ltr;text-align:right}
+    @media(max-width:1180px){.header-calendar{display:none}}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"ابنیه سازان پایدار شمیران","url":"https://abnieh-sazan-paydar.github.io/","telephone":["+982126313946","+989125361958"],"email":"Abniyeh_sazan_Shemiran@gmail.com","address":{"@type":"PostalAddress","addressLocality":"تهران","streetAddress":"پاسداران، بوستان دهم","addressCountry":"IR"},"founder":{"@type":"Person","name":"سعید کیادربندسری","jobTitle":"رئیس هیئت‌مدیره"}}
@@ -91,6 +103,19 @@
     </nav>
     <div class="header-actions">
       <a class="header-cta" href="#request">درخواست مشاوره</a>
+      <div class="header-calendar" role="group" aria-label="تاریخ شمسی و ساعت تهران">
+        <span class="header-calendar-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+            <path d="M16 3v4M8 3v4M3 10h18"></path>
+            <path d="M8 14h.01M12 14h.01M16 14h.01M8 17.5h.01M12 17.5h.01"></path>
+          </svg>
+        </span>
+        <span class="header-calendar-copy">
+          <time class="header-calendar-date" id="header-date"></time>
+          <time class="header-calendar-time" id="header-clock"></time>
+        </span>
+      </div>
       <button class="menu-toggle" id="menu-toggle" aria-label="باز کردن منو"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -355,6 +380,40 @@
     })();
   </script>
 
+
+  <script>
+    (() => {
+      const dateElement = document.getElementById('header-date');
+      const clockElement = document.getElementById('header-clock');
+      if (!dateElement || !clockElement) return;
+
+      const dateFormatter = new Intl.DateTimeFormat('fa-IR-u-ca-persian', {
+        timeZone: 'Asia/Tehran',
+        weekday: 'short',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric'
+      });
+      const timeFormatter = new Intl.DateTimeFormat('fa-IR', {
+        timeZone: 'Asia/Tehran',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+      });
+
+      const updateHeaderCalendar = () => {
+        const now = new Date();
+        dateElement.textContent = dateFormatter.format(now);
+        dateElement.dateTime = now.toISOString().slice(0, 10);
+        clockElement.textContent = timeFormatter.format(now);
+        clockElement.dateTime = now.toISOString();
+      };
+
+      updateHeaderCalendar();
+      window.setInterval(updateHeaderCalendar, 1000);
+    })();
+  </script>
 
 </body>
 </html>
