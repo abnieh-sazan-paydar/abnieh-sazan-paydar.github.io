@@ -73,6 +73,23 @@
     .header-calendar-time{font:800 15px/1.35 var(--latin);color:var(--ink);letter-spacing:.5px;direction:ltr;text-align:right}
     @media(max-width:1180px){.header-calendar{display:none}}
 
+
+
+    /* Compact header search beside the calendar */
+    .header-search{position:relative;display:flex;align-items:center}
+    .header-search-toggle{width:50px;height:50px;padding:0;border:1px solid #ddd7cf;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#fff 0%,#f7f3ee 100%);color:var(--ink);box-shadow:0 8px 22px rgba(28,24,19,.08);cursor:pointer;transition:border-color .2s,color .2s,transform .2s}
+    .header-search-toggle:hover,.header-search.is-open .header-search-toggle{color:var(--red);border-color:rgba(179,18,45,.45);transform:translateY(-1px)}
+    .header-search-toggle svg{width:21px;height:21px;display:block}
+    .header-search-panel{position:absolute;top:calc(100% + 12px);left:0;width:310px;padding:12px;border:1px solid #ddd7cf;border-radius:14px;display:none;background:#fff;box-shadow:0 18px 45px rgba(28,24,19,.16);z-index:70}
+    .header-search.is-open .header-search-panel{display:block;animation:header-search-in .18s ease both}
+    .header-search-form{display:flex;align-items:center;gap:8px}
+    .header-search-input{width:100%;height:43px;padding:8px 12px;border:1px solid #d8d4cd;border-radius:9px;background:#f8f6f2;color:var(--ink);outline:0}
+    .header-search-input:focus{border-color:var(--red);background:#fff}
+    .header-search-submit{height:43px;min-width:68px;padding:0 13px;border:0;border-radius:9px;background:var(--red);color:#fff;cursor:pointer}
+    .header-search-status{display:block;min-height:17px;margin-top:6px;color:var(--muted);font-size:12px}
+    @keyframes header-search-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+    @media(max-width:1180px){.header-search{display:none}}
+
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"ابنیه سازان پایدار شمیران","url":"https://abnieh-sazan-paydar.github.io/","telephone":["+982126313946","+989125361958"],"email":"Abniyeh_sazan_Shemiran@gmail.com","address":{"@type":"PostalAddress","addressLocality":"تهران","streetAddress":"پاسداران، بوستان دهم","addressCountry":"IR"},"founder":{"@type":"Person","name":"سعید کیادربندسری","jobTitle":"رئیس هیئت‌مدیره"}}
@@ -115,6 +132,21 @@
           <time class="header-calendar-date" id="header-date"></time>
           <time class="header-calendar-time" id="header-clock"></time>
         </span>
+      </div>
+      <div class="header-search" id="header-search">
+        <button class="header-search-toggle" id="header-search-toggle" type="button" aria-label="جست‌وجو در صفحه" aria-expanded="false" aria-controls="header-search-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+          </svg>
+        </button>
+        <div class="header-search-panel" id="header-search-panel">
+          <form class="header-search-form" id="header-search-form" role="search">
+            <input class="header-search-input" id="header-search-input" type="search" placeholder="جست‌وجو در این صفحه…" aria-label="عبارت موردنظر">
+            <button class="header-search-submit" type="submit">جست‌وجو</button>
+          </form>
+          <small class="header-search-status" id="header-search-status" aria-live="polite"></small>
+        </div>
       </div>
       <button class="menu-toggle" id="menu-toggle" aria-label="باز کردن منو"><span></span><span></span><span></span></button>
     </div>
@@ -412,6 +444,42 @@
 
       updateHeaderCalendar();
       window.setInterval(updateHeaderCalendar, 1000);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const search = document.getElementById('header-search');
+      const toggle = document.getElementById('header-search-toggle');
+      const form = document.getElementById('header-search-form');
+      const input = document.getElementById('header-search-input');
+      const status = document.getElementById('header-search-status');
+      if (!search || !toggle || !form || !input || !status) return;
+
+      const setOpen = (open) => {
+        search.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        if (open) window.setTimeout(() => input.focus(), 50);
+      };
+
+      toggle.addEventListener('click', () => setOpen(!search.classList.contains('is-open')));
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const query = input.value.trim();
+        if (!query) {
+          status.textContent = 'عبارت موردنظر را وارد کنید.';
+          input.focus();
+          return;
+        }
+        const found = window.find(query, false, false, true, false, false, false);
+        status.textContent = found ? 'نتیجه پیدا شد؛ برای مورد بعدی دوباره جست‌وجو کنید.' : 'عبارتی با این عنوان پیدا نشد.';
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setOpen(false);
+      });
+      document.addEventListener('click', (event) => {
+        if (!search.contains(event.target)) setOpen(false);
+      });
     })();
   </script>
 
