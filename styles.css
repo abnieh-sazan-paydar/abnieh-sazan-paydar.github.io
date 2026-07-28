@@ -127,3 +127,8 @@ small,
     white-space:nowrap!important;
   }
 }
+
+/* mobile-brand-name-single-line */
+@media(max-width:820px){
+  .brand strong{white-space:nowrap!important}
+}
