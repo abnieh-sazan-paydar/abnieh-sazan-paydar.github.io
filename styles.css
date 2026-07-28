@@ -156,3 +156,8 @@ small,
     white-space:nowrap!important;
   }
 }
+
+/* hero-english-note-font-size */
+.hero-note,
+.hero-note span,
+.hero-note b{font-size:14px!important}
