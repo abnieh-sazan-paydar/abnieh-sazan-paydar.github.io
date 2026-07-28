@@ -202,5 +202,49 @@
       "assets/project-images/project-07/10-masonry-progress.webp",
       "assets/project-images/project-07/11-current-structure.webp"
     ]
+  },
+  {
+    "id": "project-08",
+    "title": "اجرای ویلای مسکونی مدرن در بستر کوهستانی",
+    "service": "اجرا",
+    "summary": "اجرای مرحله‌به‌مرحله ویلای مسکونی مدرن در زمینی شیب‌دار و کوهستانی؛ از فونداسیون، دیوارهای حائل و نصب سازه فولادی تا سقف‌های مرکب، دیوارچینی، هماهنگی تأسیسات، اجرای نمای سنگ، تکمیل استخر و آماده‌سازی محوطه.",
+    "meta": [
+      "پروژه اجرایی",
+      "کاربری: ویلای مسکونی",
+      "سازه فولادی و سقف مرکب",
+      "نمای سنگ و پوشش مدرن",
+      "بستر شیب‌دار کوهستانی"
+    ],
+    "cover": "assets/project-images/project-08/01-cover-render.webp",
+    "images": [
+      "assets/project-images/project-08/01-cover-render.webp",
+      "assets/project-images/project-08/02-foundation-site.webp",
+      "assets/project-images/project-08/03-foundation-reinforcement.webp",
+      "assets/project-images/project-08/04-foundation-grid.webp",
+      "assets/project-images/project-08/05-concrete-foundation.webp",
+      "assets/project-images/project-08/06-retaining-wall-rebar.webp",
+      "assets/project-images/project-08/07-steel-frame.webp",
+      "assets/project-images/project-08/08-composite-slab-rebar.webp",
+      "assets/project-images/project-08/09-slab-concreting.webp",
+      "assets/project-images/project-08/10-deck-and-steel.webp",
+      "assets/project-images/project-08/11-winter-construction.webp",
+      "assets/project-images/project-08/12-exterior-blockwork.webp",
+      "assets/project-images/project-08/13-electrical-conduits.webp",
+      "assets/project-images/project-08/14-interior-services.webp",
+      "assets/project-images/project-08/15-wall-services.webp",
+      "assets/project-images/project-08/16-facade-substructure.webp",
+      "assets/project-images/project-08/17-ceiling-mep.webp",
+      "assets/project-images/project-08/18-mep-corridor.webp",
+      "assets/project-images/project-08/19-electrical-ceiling.webp",
+      "assets/project-images/project-08/20-secondary-steel-frame.webp",
+      "assets/project-images/project-08/21-stone-facade-winter.webp",
+      "assets/project-images/project-08/22-facade-and-installations.webp",
+      "assets/project-images/project-08/23-interior-opening.webp",
+      "assets/project-images/project-08/24-interior-mep-progress.webp",
+      "assets/project-images/project-08/25-exterior-finishing.webp",
+      "assets/project-images/project-08/26-facade-progress.webp",
+      "assets/project-images/project-08/27-indoor-pool.webp",
+      "assets/project-images/project-08/28-landscape-progress.webp"
+    ]
   }
 ]
