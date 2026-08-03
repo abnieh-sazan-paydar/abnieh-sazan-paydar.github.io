@@ -265,5 +265,44 @@
       "assets/project-images/project-08/27-indoor-pool.webp",
       "assets/project-images/project-08/28-landscape-progress.webp"
     ]
+  },
+  {
+    "id": "project-09",
+    "title": "پروژه ۹",
+    "service": "نظارت فنی",
+    "summary": "نظارت فنی بر اجرای ساختمان مسکونی شش‌طبقه با سازه بتن‌آرمه؛ مستندسازی مراحل پروژه از وضعیت پیش از تخریب و عملیات تخریب تا آرماتوربندی فونداسیون، اجرای سقف‌ها و پیشرفت اسکلت بتنی.",
+    "meta": [
+      "کاربری: مسکونی",
+      "۶ طبقه روی زمین",
+      "سازه بتن‌آرمه",
+      "موقعیت: تهران، منطقه ۱۵",
+      "شروع پروژه: ۱۴۰۳/۱۱/۲۷"
+    ],
+    "cover": "assets/project-images/project-09/cover-render.webp",
+    "images": [
+      "assets/project-images/project-09/01-before-demolition.webp",
+      "assets/project-images/project-09/02-demolition-interior.webp",
+      "assets/project-images/project-09/03-demolition-progress.webp",
+      "assets/project-images/project-09/04-demolition-rubble.webp",
+      "assets/project-images/project-09/05-project-board.webp",
+      "assets/project-images/project-09/06-foundation-rebar.webp",
+      "assets/project-images/project-09/07-foundation-reinforcement-detail.webp",
+      "assets/project-images/project-09/08-shoring-and-formwork.webp",
+      "assets/project-images/project-09/09-slab-reinforcement.webp",
+      "assets/project-images/project-09/10-slab-edge-reinforcement.webp",
+      "assets/project-images/project-09/11-eps-block-slab.webp",
+      "assets/project-images/project-09/12-concrete-frame-progress.webp",
+      "assets/project-images/project-09/13-facade-structure-progress.webp",
+      "assets/project-images/project-09/14-upper-slab-reinforcement.webp",
+      "assets/project-images/project-09/15-upper-slab-grid.webp",
+      "assets/project-images/project-09/16-interior-structure.webp",
+      "assets/project-images/project-09/17-open-facade-progress.webp",
+      "assets/project-images/project-09/18-floor-structure-progress.webp",
+      "assets/project-images/project-09/19-stair-formwork.webp",
+      "assets/project-images/project-09/20-stair-and-frame.webp",
+      "assets/project-images/project-09/21-column-and-masonry.webp",
+      "assets/project-images/project-09/22-eps-materials.webp",
+      "assets/project-images/project-09/23-site-materials.webp"
+    ]
   }
 ]
