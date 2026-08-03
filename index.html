@@ -22,11 +22,11 @@
     .documents-head{text-align:center;max-width:760px;margin:0 auto 36px}
     .documents-head h2{font-size:clamp(30px,4vw,50px);line-height:1.35;margin:8px 0 10px}
     .documents-head p{margin:0;color:var(--muted);font-size:13px}
-    .documents-grid{display:flex;justify-content:center}
-    .document-card{width:min(100%,620px);background:var(--paper);border:1px solid var(--line);padding:16px;transition:.3s;box-shadow:0 18px 45px rgba(28,24,19,.08)}
+    .documents-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+    .document-card{width:min(100%,360px);background:var(--paper);border:1px solid var(--line);padding:16px;transition:.3s;box-shadow:0 18px 45px rgba(28,24,19,.08)}
     .document-card:hover{transform:translateY(-6px);box-shadow:0 28px 60px rgba(28,24,19,.13)}
-    .document-image-wrap{display:block;background:#fff;overflow:hidden;border:1px solid #e4e0d9}
-    .document-image{width:100%;height:auto;display:block}
+    .document-image-wrap{aspect-ratio:4/3;display:grid;place-items:center;background:#fff;overflow:hidden;border:1px solid #e4e0d9}
+    .document-image{width:100%;height:100%;object-fit:contain;display:block}
     .document-copy{text-align:center;padding:20px 10px 8px}
     .document-copy h3{margin:0 0 7px;font-size:21px}
     .document-copy p{margin:0;color:var(--muted);font-size:12px}
@@ -317,16 +317,56 @@
       <div class="documents-head reveal">
         <span class="kicker">مدارک و مجوزها</span>
         <h2>گالری مدارک حرفه‌ای</h2>
-        <p>پروانه اشتغال به کار مهندسی در صلاحیت‌های محاسبات، نظارت و اجرا</p>
+        <p>منتخبی از مدارک تحصیلی، حرفه‌ای و سوابق علمی</p>
       </div>
       <div class="documents-grid">
         <article class="document-card reveal">
           <a class="document-image-wrap" href="assets/images/documents/parvane-nezam-mohandesi.jpg" target="_blank" rel="noopener" aria-label="مشاهده پروانه اشتغال به کار مهندسی در اندازه کامل">
-            <img class="document-image" src="assets/images/documents/parvane-nezam-mohandesi.jpg" alt="پروانه اشتغال به کار مهندسی سعید کیادربندسری">
+            <img class="document-image" src="assets/images/documents/parvane-nezam-mohandesi.jpg" alt="پروانه اشتغال به کار مهندسی سعید کیادربندسری" loading="lazy">
           </a>
           <div class="document-copy">
             <h3>پروانه اشتغال به کار مهندسی</h3>
             <p>مهندسی عمران — صلاحیت محاسبات، نظارت و اجرا</p>
+            <span class="document-hint">برای مشاهده بزرگ‌تر روی تصویر کلیک کنید</span>
+          </div>
+        </article>
+        <article class="document-card reveal">
+          <a class="document-image-wrap" href="assets/images/documents/phd-degree.jpg" target="_blank" rel="noopener" aria-label="مشاهده دانشنامه دکتری تخصصی در اندازه کامل">
+            <img class="document-image" src="assets/images/documents/phd-degree.jpg" alt="دانشنامه دکتری تخصصی مهندسی عمران سازه سعید کیادربندسری" loading="lazy">
+          </a>
+          <div class="document-copy">
+            <h3>دانشنامه دکتری تخصصی مهندسی عمران – سازه</h3>
+            <p>دانشگاه آزاد اسلامی — واحد تهران مرکزی</p>
+            <span class="document-hint">برای مشاهده بزرگ‌تر روی تصویر کلیک کنید</span>
+          </div>
+        </article>
+        <article class="document-card reveal">
+          <a class="document-image-wrap" href="assets/images/documents/judicial-expert-card.jpg" target="_blank" rel="noopener" aria-label="مشاهده کارت معرفی کارشناس رسمی دادگستری در اندازه کامل">
+            <img class="document-image" src="assets/images/documents/judicial-expert-card.jpg" alt="کارت معرفی کارشناس رسمی دادگستری رشته راه و ساختمان" loading="lazy">
+          </a>
+          <div class="document-copy">
+            <h3>کارت معرفی کارشناس رسمی دادگستری</h3>
+            <p>رشته راه و ساختمان — دکتری سازه</p>
+            <span class="document-hint">برای مشاهده بزرگ‌تر روی تصویر کلیک کنید</span>
+          </div>
+        </article>
+        <article class="document-card reveal">
+          <a class="document-image-wrap" href="assets/images/documents/sharif-conference-certificate.jpg" target="_blank" rel="noopener" aria-label="مشاهده گواهی حضور در کنفرانس دانشگاه صنعتی شریف در اندازه کامل">
+            <img class="document-image" src="assets/images/documents/sharif-conference-certificate.jpg" alt="گواهی حضور در کنفرانس ملی دانشگاه صنعتی شریف" loading="lazy">
+          </a>
+          <div class="document-copy">
+            <h3>گواهی حضور در دومین کنفرانس ملی پژوهش‌های کاربردی در مهندسی سازه و مدیریت ساخت</h3>
+            <p>دانشگاه صنعتی شریف — اسفند ۱۳۹۶</p>
+            <span class="document-hint">برای مشاهده بزرگ‌تر روی تصویر کلیک کنید</span>
+          </div>
+        </article>
+        <article class="document-card reveal">
+          <a class="document-image-wrap" href="assets/images/documents/structures-2022-article.webp" target="_blank" rel="noopener" aria-label="مشاهده مقاله منتشرشده در مجله Structures در اندازه کامل">
+            <img class="document-image" src="assets/images/documents/structures-2022-article.webp" alt="مقاله علمی میراگرهای اصطکاکی فولادی منتشرشده در مجله Structures" loading="lazy">
+          </a>
+          <div class="document-copy">
+            <h3>مقاله علمی منتشرشده در مجله Structures</h3>
+            <p>تحلیل میراگرهای اصطکاکی فولادی — Elsevier، ۲۰۲۲</p>
             <span class="document-hint">برای مشاهده بزرگ‌تر روی تصویر کلیک کنید</span>
           </div>
         </article>
