@@ -91,11 +91,12 @@
     @media(max-width:1180px){.header-search{display:none}}
 
   </style>
+  <link rel="stylesheet" href="corporate.css?v=20260830-1">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"ابنیه سازان پایدار شمیران","url":"https://abnieh-sazan-paydar.github.io/","telephone":["+982126313946","+989125361958"],"email":"Abniyeh_sazan_Shemiran@gmail.com","address":{"@type":"PostalAddress","addressLocality":"تهران","streetAddress":"پاسداران، بوستان دهم","addressCountry":"IR"},"founder":{"@type":"Person","name":"سعید کیادربندسری","jobTitle":"رئیس هیئت‌مدیره"}}
   </script>
 </head>
-<body>
+<body class="corporate-site home-page">
   <div class="social-strip">
     <div class="strip-contact"><a href="tel:+982126313946">۰۲۱ ۲۶۳۱ ۳۹۴۶</a><span>تهران، پاسداران</span></div>
     <div class="strip-social" aria-label="شبکه‌های اجتماعی">
@@ -111,10 +112,20 @@
       <span><strong>ابنیه سازان پایدار شمیران</strong><small>طراحی • نظارت • اجرا</small></span>
     </a>
     <nav id="main-nav" aria-label="منوی اصلی">
-      <a href="#services">خدمات</a>
-      <a href="#about">درباره ما</a>
+      <a href="#top">صفحه اصلی</a>
+      <details class="nav-dropdown">
+        <summary>خدمات</summary>
+        <div class="nav-dropdown-panel">
+          <a href="#services"><b>01</b><span>طراحی معماری، سازه و تأسیسات</span></a>
+          <a href="#services"><b>02</b><span>نظارت و کنترل فنی پروژه</span></a>
+          <a href="#services"><b>03</b><span>اجرا و مدیریت یکپارچه ساخت</span></a>
+          <a href="#credentials"><b>04</b><span>مشاوره و کارشناسی رسمی</span></a>
+          <a href="#services"><b>05</b><span>قراردادها و خدمات حقوقی ساخت</span></a>
+        </div>
+      </details>
+      <a href="#pathway">فرآیند همکاری</a>
       <a href="#projects">پروژه‌ها</a>
-      <a href="#credentials">صلاحیت‌ها</a>
+      <a href="#about">درباره ما</a>
       <a href="articles.html">مقالات</a>
       <a href="#contact">تماس</a>
     </nav>
@@ -133,21 +144,12 @@
           <time class="header-calendar-time" id="header-clock"></time>
         </span>
       </div>
-      <div class="header-search" id="header-search">
-        <button class="header-search-toggle" id="header-search-toggle" type="button" aria-label="جست‌وجو در صفحه" aria-expanded="false" aria-controls="header-search-panel">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <path d="m20 20-4-4"></path>
-          </svg>
-        </button>
-        <div class="header-search-panel" id="header-search-panel">
-          <form class="header-search-form" id="header-search-form" role="search">
-            <input class="header-search-input" id="header-search-input" type="search" placeholder="جست‌وجو در این صفحه…" aria-label="عبارت موردنظر">
-            <button class="header-search-submit" type="submit">جست‌وجو</button>
-          </form>
-          <small class="header-search-status" id="header-search-status" aria-live="polite"></small>
-        </div>
-      </div>
+      <a class="header-search-link" href="articles.html" aria-label="جست‌وجو در مقالات و پژوهش‌ها">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-4-4"></path>
+        </svg>
+      </a>
       <button class="menu-toggle" id="menu-toggle" aria-label="باز کردن منو"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -176,6 +178,12 @@
           <a class="button button-light" href="#projects">مشاهده پروژه‌ها</a>
           <a class="button button-outline" href="#request">شروع همکاری</a>
         </div>
+        <div class="hero-service-pills" aria-label="حوزه‌های خدمات شرکت">
+          <span>طراحی و محاسبات</span>
+          <span>نظارت و اجرا</span>
+          <span>مدیریت ساخت</span>
+          <span>کارشناسی رسمی</span>
+        </div>
       </div>
       <div class="hero-note">
         <span>ABNIEH SAZAN PAYDAR</span>
@@ -183,13 +191,41 @@
       </div>
     </section>
 
-    <section class="intro-band section-pad">
-      <div class="section-number">01</div>
-      <div>
+    <section class="trust-ribbon section-pad" aria-label="مزیت‌های کلیدی شرکت">
+      <article class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V9l6-5 6 5v11M9 20v-6h6v6"/></svg></span>
+        <div><strong>از طراحی تا تحویل</strong><small>مدیریت یکپارچه تمام مراحل پروژه</small></div>
+      </article>
+      <article class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M5 21c.7-4.2 3-6.5 7-6.5s6.3 2.3 7 6.5M18 4l1 1 2-2"/></svg></span>
+        <div><strong>سه صلاحیت مهندسی</strong><small>طراحی، نظارت و اجرای حرفه‌ای</small></div>
+      </article>
+      <article class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><strong>کارشناسی رسمی</strong><small>ارزیابی تخصصی و تصمیم‌سازی مطمئن</small></div>
+      </article>
+      <article class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M6 3v8M18 3v8M5 13h4v4H5zM11 13h8v8h-8z"/></svg></span>
+        <div><strong>هماهنگی چهار رشته</strong><small>معماری، سازه، برق و مکانیک</small></div>
+      </article>
+    </section>
+
+    <section class="company-overview section-pad" id="company">
+      <div class="overview-copy reveal">
         <span class="kicker">درباره شرکت</span>
         <h2>راه‌حل‌های مهندسی منسجم برای ساخت ماندگار</h2>
+        <p>شرکت ابنیه سازان پایدار شمیران خدمات طراحی، محاسبات، نظارت، اجرا، مدیریت ساخت و مشاوره تخصصی را در یک ساختار هماهنگ ارائه می‌کند؛ ساختاری که امکان کنترل هم‌زمان کیفیت، زمان، هزینه و تعهدات قراردادی پروژه را فراهم می‌سازد.</p>
+        <div class="overview-actions">
+          <a href="#pathway">مشاهده فرآیند همکاری</a>
+          <a href="#about">آشنایی با مدیریت شرکت</a>
+        </div>
       </div>
-      <p>شرکت ابنیه سازان پایدار شمیران با رویکردی میان‌رشته‌ای، خدمات طراحی، محاسبات، نظارت، اجرا و مشاوره را در یک ساختار واحد ارائه می‌کند تا کیفیت، زمان و هزینه پروژه هم‌زمان کنترل شوند.</p>
+      <div class="overview-metrics reveal" aria-label="اطلاعات حرفه‌ای شرکت">
+        <article class="overview-metric"><strong>۴ رشته</strong><span>طراحی هماهنگ معماری، سازه، برق و مکانیک</span></article>
+        <article class="overview-metric"><strong>۳ صلاحیت</strong><span>طراحی، نظارت و اجرای مهندسی ساختمان</span></article>
+        <article class="overview-metric"><strong>۰ تا ۱۰۰</strong><span>همراهی از امکان‌سنجی تا تحویل نهایی پروژه</span></article>
+        <article class="overview-metric"><strong>۱ تیم</strong><span>مدیریت فنی، اجرایی و حقوقی در یک مجموعه</span></article>
+      </div>
     </section>
 
     <section class="section section-pad" id="services">
@@ -198,11 +234,25 @@
         <p>از مطالعات اولیه تا تحویل نهایی؛ با هماهنگی کامل میان معماری، سازه و تأسیسات.</p>
       </div>
       <div class="service-grid">
-        <article class="service-card reveal"><span>01</span><h3>طراحی یکپارچه</h3><p>معماری، سازه، برق، مکانیک و تهیه نقشه‌های فاز یک، فاز دو و اجرایی.</p><small>DESIGN & ENGINEERING</small></article>
-        <article class="service-card reveal"><span>02</span><h3>نظارت و کنترل فنی</h3><p>کنترل انطباق عملیات با نقشه‌های مصوب، مقررات ملی و الزامات کیفی.</p><small>TECHNICAL SUPERVISION</small></article>
-        <article class="service-card reveal"><span>03</span><h3>اجرا و مدیریت ساخت</h3><p>اجرای صفر تا صد، مدیریت عوامل، تأمین، برنامه‌ریزی و کنترل زمان و هزینه.</p><small>CONSTRUCTION MANAGEMENT</small></article>
-        <article class="service-card reveal"><span>04</span><h3>مشاوره و کارشناسی</h3><p>امکان‌سنجی، ارزیابی فنی، برآورد خسارت و ارائه راهکار برای تصمیم‌گیری مطمئن.</p><small>CONSULTING & EXPERTISE</small></article>
-        <article class="service-card reveal"><span>05</span><h3>خدمات حقوقی</h3><p>خدمات حقوقی در زمینه عقد قرارداد مشارکت در ساخت و مدیریت پیمان</p><small>CONSTRUCTION LEGAL SERVICES</small></article>
+        <article class="service-card reveal"><span>01</span><h3>طراحی یکپارچه</h3><p>معماری، سازه، برق، مکانیک و تهیه نقشه‌های فاز یک، فاز دو و اجرایی.</p><small>DESIGN & ENGINEERING</small><a class="service-cta" href="#request" data-service-choice="طراحی یکپارچه">درخواست این خدمت</a></article>
+        <article class="service-card reveal"><span>02</span><h3>نظارت و کنترل فنی</h3><p>کنترل انطباق عملیات با نقشه‌های مصوب، مقررات ملی و الزامات کیفی.</p><small>TECHNICAL SUPERVISION</small><a class="service-cta" href="#request" data-service-choice="نظارت فنی">درخواست این خدمت</a></article>
+        <article class="service-card reveal"><span>03</span><h3>اجرا و مدیریت ساخت</h3><p>اجرای صفر تا صد، مدیریت عوامل، تأمین، برنامه‌ریزی و کنترل زمان و هزینه.</p><small>CONSTRUCTION MANAGEMENT</small><a class="service-cta" href="#request" data-service-choice="اجرای پروژه">درخواست این خدمت</a></article>
+        <article class="service-card reveal"><span>04</span><h3>مشاوره و کارشناسی</h3><p>امکان‌سنجی، ارزیابی فنی، برآورد خسارت و ارائه راهکار برای تصمیم‌گیری مطمئن.</p><small>CONSULTING & EXPERTISE</small><a class="service-cta" href="#request" data-service-choice="مشاوره تخصصی">درخواست این خدمت</a></article>
+        <article class="service-card reveal"><span>05</span><h3>خدمات حقوقی</h3><p>تنظیم و بررسی قراردادهای مشارکت در ساخت، مدیریت پیمان و تعهدات پروژه.</p><small>CONSTRUCTION LEGAL SERVICES</small><a class="service-cta" href="#request">دریافت مشاوره</a></article>
+      </div>
+    </section>
+
+    <section class="project-pathway section-pad" id="pathway">
+      <div class="pathway-heading reveal">
+        <div><span class="kicker">نقشه راه پروژه</span><h2>مسیر روشن همکاری، از تصمیم تا تحویل</h2></div>
+        <p>هر پروژه با یک فرآیند مرحله‌بندی‌شده پیش می‌رود تا مسئولیت‌ها، خروجی‌ها و نقاط کنترل برای کارفرما شفاف باشد.</p>
+      </div>
+      <div class="pathway-grid">
+        <article class="pathway-step reveal"><b>01</b><h3>شناخت و امکان‌سنجی</h3><p>بررسی نیاز، وضعیت ملک، محدودیت‌ها، بودجه و اهداف اصلی کارفرما.</p></article>
+        <article class="pathway-step reveal"><b>02</b><h3>طراحی و برآورد</h3><p>تدوین راهکار فنی، هماهنگی رشته‌ها و تهیه برآورد اولیه زمان و هزینه.</p></article>
+        <article class="pathway-step reveal"><b>03</b><h3>برنامه‌ریزی و قرارداد</h3><p>تعریف دامنه کار، مسئولیت‌ها، برنامه زمان‌بندی و چارچوب مالی شفاف.</p></article>
+        <article class="pathway-step reveal"><b>04</b><h3>اجرا و کنترل کیفیت</h3><p>مدیریت عوامل اجرایی و کنترل پیوسته کیفیت، پیشرفت، هزینه و ایمنی.</p></article>
+        <article class="pathway-step reveal"><b>05</b><h3>تحویل و پشتیبانی</h3><p>کنترل نهایی، جمع‌بندی مستندات، رفع نواقص و تحویل منظم پروژه.</p></article>
       </div>
     </section>
 
@@ -284,6 +334,21 @@
         <button data-filter="طراحی سازه">طراحی سازه</button>
       </div>
       <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="why-us section-pad" id="why-us">
+      <div class="why-copy reveal">
+        <span class="kicker">چرا ابنیه سازان پایدار</span>
+        <h2>تصمیم مهندسی، اجرای قابل کنترل</h2>
+        <p>مزیت اصلی مجموعه، اتصال واقعی دانش طراحی به تجربه اجرا و پشتیبانی حقوقی پروژه است. این پیوستگی، دوباره‌کاری را کاهش می‌دهد و به کارفرما دید روشن‌تری از کیفیت، هزینه و برنامه زمانی می‌دهد.</p>
+        <a href="#request">درخواست جلسه اولیه</a>
+      </div>
+      <div class="why-grid">
+        <article class="why-card reveal"><span>01</span><h3>یک مسئولیت یکپارچه</h3><p>هماهنگی میان طراح، ناظر، مجری و مشاور در یک ساختار واحد.</p></article>
+        <article class="why-card reveal"><span>02</span><h3>کنترل مستند پروژه</h3><p>ثبت تصمیم‌ها، کنترل تغییرات و گزارش‌پذیری در نقاط کلیدی اجرا.</p></article>
+        <article class="why-card reveal"><span>03</span><h3>مدیریت زمان و هزینه</h3><p>برنامه‌ریزی اجرایی واقع‌بینانه و پایش مستمر منابع و پیشرفت کار.</p></article>
+        <article class="why-card reveal"><span>04</span><h3>پشتوانه فنی و حقوقی</h3><p>کاهش ریسک اختلاف با تعریف شفاف تعهدات و کنترل تخصصی کیفیت.</p></article>
+      </div>
     </section>
 
     <section class="credentials section-pad" id="credentials">
@@ -397,8 +462,9 @@
     <div class="footer-main">
       <div class="footer-brand">
         <img src="assets/header-logo.webp" alt="لوگوی شرکت">
-        <div><h2>ابنیه سازان پایدار شمیران</h2><p>ارائه خدمات تخصصی در طراحی و اجرای پروژه‌های عمرانی و معماری</p><p>شماره ثبت: ۶۳۳۸۷۷ &nbsp; | &nbsp; شناسه ملی: ۱۴۰۱۳۴۹۲۹۴۹</p></div>
+        <div><h2>ابنیه سازان پایدار شمیران</h2><p>ارائه خدمات تخصصی در طراحی و اجرای پروژه‌های عمرانی و معماری</p><p class="company-registration">شماره ثبت: ۶۳۳۸۷۷ &nbsp; | &nbsp; شناسه ملی: ۱۴۰۱۳۴۹۲۹۴۹</p></div>
       </div>
+      <div class="footer-col"><small>دسترسی سریع</small><a href="#services">خدمات</a><a href="#pathway">فرآیند همکاری</a><a href="#projects">پروژه‌ها</a><a href="articles.html">مقالات</a></div>
       <div class="footer-col"><small>ارتباط</small><a href="tel:+982126313946">۰۲۱ ۲۶۳۱ ۳۹۴۶</a><a href="tel:+989125361958">۰۹۱۲ ۵۳۶ ۱۹۵۸</a><a href="mailto:Abniyeh_sazan_Shemiran@gmail.com">ایمیل شرکت</a></div>
       <div class="footer-col"><small>شبکه‌های اجتماعی</small><a href="https://instagram.com/omran_kia" target="_blank" rel="noopener">Instagram</a><a href="https://youtube.com/@omran_kia" target="_blank" rel="noopener">YouTube</a><a href="https://t.me/omran_kia" target="_blank" rel="noopener">Telegram</a></div>
       <div class="footer-col"><small>آدرس</small><p>تهران، پاسداران، بوستان دهم</p><a href="#top">بازگشت به بالا ↑</a></div>
@@ -417,6 +483,7 @@
   <a class="whatsapp-float" href="https://wa.me/989125361958" target="_blank" rel="noopener" aria-label="گفت‌وگو در واتساپ">WA</a>
   <script src="hero-carousel.js?v=20260727-1" defer></script>
   <script src="app.js"></script>
+  <script src="corporate.js?v=20260830-1" defer></script>
 
   <script>
     (() => {
