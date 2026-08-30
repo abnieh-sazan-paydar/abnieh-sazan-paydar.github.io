@@ -445,6 +445,8 @@ body.corporate-site .publication-section{padding-top:65px;padding-bottom:100px}
 .publication-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:28px}
 body.corporate-site .filter-bar{margin:0}
 body.corporate-site .filter-bar button{padding:9px 15px;border-radius:999px;background:#fff;font-size:11px!important}
+body.corporate-site .filter-bar button.active,
+body.corporate-site .filter-bar button:hover{background:var(--corporate-navy);border-color:var(--corporate-navy);color:#fff}
 body.corporate-site .publication-search{width:min(330px,100%);height:44px;padding:8px 14px;border:1px solid var(--corporate-line);border-radius:10px;background:#fff;outline:0;font-size:12px!important}
 body.corporate-site .publication-search:focus{border-color:#dc9aa6;box-shadow:0 0 0 3px rgba(179,18,45,.08)}
 body.corporate-site .publication-list{border:0;display:grid;gap:14px}
