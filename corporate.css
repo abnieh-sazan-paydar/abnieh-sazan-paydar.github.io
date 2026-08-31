@@ -556,3 +556,183 @@ body.corporate-site .pdf-link{width:90px;height:90px;border-radius:14px}
   .corporate-site *:before,
   .corporate-site *:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
+
+/* Academy-inspired monitor scale: larger modules and more readable typography */
+body.corporate-site{font-size:17px}
+
+@media(min-width:1001px){
+  .corporate-site .brand strong{font-size:18px!important}
+  .corporate-site .brand small{font-size:13px!important}
+  .corporate-site .site-header nav>a,
+  .corporate-site .nav-dropdown>summary{font-size:16px!important}
+  .corporate-site .header-cta{font-size:15px!important;padding-inline:20px}
+
+  .corporate-site .hero .eyebrow{font-size:15px!important}
+  .corporate-site .hero h1{font-size:clamp(48px,5.1vw,76px)!important}
+  .corporate-site .hero p{font-size:18px!important;max-width:720px}
+  .corporate-site .hero .button{font-size:16px!important;min-height:54px;padding-inline:29px}
+  .hero-service-pills span{font-size:13px!important;padding:8px 13px}
+
+  .trust-ribbon{padding-top:27px;padding-bottom:27px}
+  .trust-item{padding:17px 24px;grid-template-columns:54px 1fr;gap:15px}
+  .trust-icon{width:54px;height:54px}
+  .trust-item strong{font-size:17px!important}
+  .trust-item small{font-size:13px!important;line-height:1.8}
+
+  .company-overview{padding-top:110px;padding-bottom:110px;gap:85px}
+  .overview-copy h2{font-size:clamp(38px,3.6vw,52px)!important}
+  .overview-copy p{font-size:17px!important;line-height:2.2}
+  .overview-actions a{font-size:15px!important;min-height:50px;padding-inline:21px}
+  .overview-metrics{gap:17px}
+  .overview-metric{min-height:175px;padding:27px}
+  .overview-metric strong{font-size:36px!important}
+  .overview-metric span{font-size:15px!important;line-height:1.9}
+
+  body.corporate-site #services{padding-top:115px;padding-bottom:120px}
+  body.corporate-site #services .section-heading{margin-bottom:52px}
+  body.corporate-site #services .section-heading h2,
+  body.corporate-site .projects-section .section-heading h2,
+  .pathway-heading h2,
+  .why-copy h2,
+  body.corporate-site .credential-title h2,
+  .knowledge-bridge-head h2{font-size:clamp(38px,3.5vw,52px)!important}
+  body.corporate-site #services .section-heading>p,
+  body.corporate-site .section-heading>p,
+  .pathway-heading p{font-size:16px!important;line-height:2.15}
+  body.corporate-site #services .service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  body.corporate-site #services .service-grid .service-card,
+  body.corporate-site #services .service-grid .service-card:nth-child(even){min-height:520px;padding:0 27px 30px}
+  body.corporate-site #services .service-grid .service-card:before{height:225px;margin-inline:-27px;width:calc(100% + 54px)}
+  body.corporate-site #services .service-grid .service-card>span{width:50px;height:50px;margin-top:-25px;margin-bottom:16px;font-size:14px!important}
+  body.corporate-site #services .service-grid .service-card h3{font-size:23px!important;margin-bottom:12px}
+  body.corporate-site #services .service-grid .service-card p{font-size:16px!important;line-height:2.05}
+  body.corporate-site #services .service-grid .service-card small{font-size:11px!important;margin-top:12px}
+  .service-cta{font-size:15px!important;margin-top:18px}
+
+  .project-pathway{padding-top:115px;padding-bottom:115px}
+  .pathway-heading{margin-bottom:55px}
+  .pathway-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .pathway-grid:before{display:none}
+  .pathway-step{min-height:285px;padding:27px;border-radius:18px}
+  .pathway-step b{width:70px;height:70px;font-size:20px!important}
+  .pathway-step h3{font-size:22px!important;margin:29px 0 11px}
+  .pathway-step p{font-size:15px!important;line-height:2.05}
+
+  body.corporate-site .projects-section{padding-top:115px;padding-bottom:125px}
+  body.corporate-site .project-filter button{font-size:14px!important;padding:11px 21px}
+  body.corporate-site .projects-grid{gap:28px}
+  body.corporate-site .project-image{height:330px}
+  body.corporate-site .project-body{padding:23px 23px 25px}
+  body.corporate-site .project-body h3{font-size:22px!important}
+  body.corporate-site .project-body p{font-size:13px!important;line-height:1.9}
+  body.corporate-site .project-body>span{font-size:13px!important}
+
+  .why-us{padding-top:115px;padding-bottom:115px;gap:90px}
+  .why-copy p{font-size:17px!important;line-height:2.2}
+  .why-copy a{font-size:15px!important;padding:12px 20px}
+  .why-grid{gap:18px}
+  .why-card{min-height:205px;padding:28px}
+  .why-card span{width:48px;height:48px;font-size:14px!important}
+  .why-card h3{font-size:20px!important;margin-top:20px}
+  .why-card p{font-size:15px!important;line-height:2.05}
+
+  body.corporate-site .management-switcher-copy strong{font-size:24px!important}
+  body.corporate-site .management-switcher-copy small,
+  body.corporate-site .management-switcher-copy span{font-size:14px!important}
+  body.corporate-site .profile-section{padding-top:100px;padding-bottom:100px;gap:70px}
+  body.corporate-site .profile-image{height:610px}
+  body.corporate-site .profile-copy h2{font-size:clamp(36px,3.4vw,49px)!important}
+  body.corporate-site .profile-copy h3{font-size:24px!important}
+  body.corporate-site .profile-copy>p{font-size:16px!important;line-height:2.2}
+  body.corporate-site .qualification-table{font-size:14px!important}
+  body.corporate-site .qualification-table thead th,
+  body.corporate-site .qualification-table td{font-size:14px!important;padding:18px 24px}
+
+  body.corporate-site .credentials{padding-top:115px;padding-bottom:115px}
+  body.corporate-site .credential-title p{font-size:17px!important;line-height:2.15}
+  body.corporate-site .credential-list{gap:16px}
+  body.corporate-site .credential-list article{min-height:145px;padding:23px;grid-template-columns:50px 1fr}
+  body.corporate-site .credential-list span{width:50px;height:50px;font-size:12px!important}
+  body.corporate-site .credential-list p{font-size:15px!important;line-height:2}
+
+  body.corporate-site .articles-preview{padding-top:115px;padding-bottom:115px}
+  body.corporate-site .article-grid{gap:22px}
+  body.corporate-site .article-card{min-height:360px;padding:31px}
+  body.corporate-site .article-card>span{font-size:13px!important}
+  body.corporate-site .article-card h3{font-size:22px!important;line-height:1.95;margin-top:45px}
+  body.corporate-site .article-card small{font-size:12px!important}
+  body.corporate-site .text-link{font-size:15px!important}
+
+  body.corporate-site .documents-section{padding-top:110px;padding-bottom:115px}
+  body.corporate-site .documents-head p{font-size:15px!important}
+  body.corporate-site .document-card{padding:12px}
+  body.corporate-site .document-copy{padding:18px 7px 9px}
+  body.corporate-site .document-copy h3{font-size:17px!important;line-height:1.8!important}
+  body.corporate-site .document-copy p{font-size:14px!important;line-height:1.9}
+  body.corporate-site .document-hint{font-size:11px!important}
+
+  body.corporate-site .request-section{padding-top:115px;padding-bottom:115px}
+  body.corporate-site .request-copy h2{font-size:clamp(38px,3.5vw,52px)!important}
+  body.corporate-site .request-copy p{font-size:17px!important}
+  body.corporate-site .contact-quick small{font-size:13px!important}
+  body.corporate-site .contact-quick bdi{font-size:18px!important}
+  body.corporate-site .project-form{padding:35px;gap:22px}
+  body.corporate-site .project-form label>span{font-size:14px!important}
+  body.corporate-site .project-form input,
+  body.corporate-site .project-form select,
+  body.corporate-site .project-form textarea{font-size:16px!important;padding:14px}
+  body.corporate-site .project-form button{font-size:17px!important;padding:17px}
+
+  body.corporate-site .footer-main{padding-top:80px;padding-bottom:72px;gap:55px}
+  body.corporate-site .footer-brand h2{font-size:22px!important}
+  body.corporate-site .footer-brand p{font-size:14px!important;line-height:2}
+  body.corporate-site .footer-col small{font-size:14px!important}
+  body.corporate-site .footer-col a,
+  body.corporate-site .footer-col p{font-size:14px!important;line-height:1.9}
+  body.corporate-site .footer-bottom{font-size:12px!important}
+
+  body.corporate-site .research-hero h1{font-size:clamp(46px,5.5vw,74px)!important}
+  body.corporate-site .research-hero p{font-size:18px!important}
+  body.corporate-site .research-stat{width:290px;height:210px;padding:32px}
+  body.corporate-site .research-stat strong{font-size:70px!important}
+  body.corporate-site .research-stat span{font-size:14px!important}
+  .article-assurance strong{font-size:17px!important}
+  .article-assurance span{font-size:14px!important;line-height:1.9}
+  body.corporate-site .filter-bar button{font-size:14px!important;padding:11px 19px}
+  body.corporate-site .publication-search{height:50px;font-size:15px!important}
+  body.corporate-site .publication{padding:34px;grid-template-columns:60px 1fr 118px;gap:34px}
+  body.corporate-site .pub-index{font-size:15px!important}
+  body.corporate-site .pub-meta{font-size:12px!important}
+  body.corporate-site .publication h2{font-size:clamp(23px,2vw,29px)!important}
+  body.corporate-site .publication .authors{font-size:12px!important}
+  body.corporate-site .publication .pub-body>p:not(.authors){font-size:16px!important;line-height:2.15}
+  body.corporate-site .tags span{font-size:11px!important;padding:6px 10px}
+  body.corporate-site .pdf-link{width:108px;height:108px}
+  body.corporate-site .pdf-link span{font-size:12px!important}
+  .knowledge-bridge-grid{gap:20px}
+  .knowledge-bridge-grid article{min-height:235px;padding:30px}
+  .knowledge-bridge-grid b{font-size:13px!important}
+  .knowledge-bridge-grid h3{font-size:21px!important}
+  .knowledge-bridge-grid p{font-size:15px!important;line-height:2.1}
+}
+
+@media(min-width:581px) and (max-width:1000px){
+  body.corporate-site #services .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.corporate-site #services .service-grid .service-card{min-height:480px}
+  body.corporate-site #services .service-grid .service-card h3{font-size:21px!important}
+  body.corporate-site #services .service-grid .service-card p{font-size:15px!important}
+}
+
+@media(max-width:580px){
+  body.corporate-site #services .service-grid .service-card{min-height:465px}
+  body.corporate-site #services .service-grid .service-card h3{font-size:21px!important}
+  body.corporate-site #services .service-grid .service-card p{font-size:15px!important}
+  .service-cta{font-size:14px!important}
+  .pathway-step h3{font-size:19px!important}
+  .pathway-step p,
+  .why-card p{font-size:14px!important}
+  body.corporate-site .project-body h3{font-size:20px!important}
+  body.corporate-site .project-body p{font-size:13px!important}
+  body.corporate-site .footer-col a,
+  body.corporate-site .footer-col p{font-size:14px!important}
+}
