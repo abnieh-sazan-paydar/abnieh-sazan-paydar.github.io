@@ -1,6 +1,6 @@
 (() => {
   const frame = document.querySelector('#about .profile-image');
-  if (frame && frame.dataset.finalSliderReady !== 'true') {
+  if (frame && !frame.classList.contains('technical-profile-visual') && frame.dataset.finalSliderReady !== 'true') {
     frame.dataset.finalSliderReady = 'true';
     frame.innerHTML = `
       <div class="about-final-slides">
